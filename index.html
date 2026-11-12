@@ -1,0 +1,289 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#0f766e"><meta name="mobile-web-app-capable" content="yes"><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icons/icon-192.png"><link rel="apple-touch-icon" href="icons/apple-touch-icon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Undiyal"><title>Undiyal</title>
+<style>
+:root{--bg:#f6f5f1;--cd:#fff;--tx:#1d2320;--mu:#6b746f;--ln:#e4e2db;--ac:#0f766e;--on:#fff;--bd:#dc2626;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121614;--cd:#1b211e;--tx:#eef1ee;--mu:#98a39d;--ln:#2a322e;--ac:#2dd4bf;--on:#06201c;--bd:#f87171;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121614;--cd:#1b211e;--tx:#eef1ee;--mu:#98a39d;--ln:#2a322e;--ac:#2dd4bf;--on:#06201c;--bd:#f87171;color-scheme:dark}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--bg);color:var(--tx);font:16px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+main{max-width:640px;margin:auto;padding:12px 14px}
+h2{font-size:15px;margin:20px 0 8px;color:var(--mu);font-weight:600;text-transform:uppercase;letter-spacing:.04em;display:flex;justify-content:space-between;align-items:center}
+.c{background:var(--cd);border:1px solid var(--ln);border-radius:16px;padding:14px;margin-bottom:10px}
+.hero{text-align:center;padding:22px 14px}.big{font-size:40px;font-weight:700;letter-spacing:-.02em}.mu{color:var(--mu);font-size:13px}
+.row{display:flex;align-items:center;gap:10px;justify-content:space-between}.r{text-align:right}
+.bar{height:10px;border-radius:9px;background:var(--ln);overflow:hidden;margin-top:8px}.bar i{display:block;height:100%;border-radius:9px}
+.dot{width:12px;height:12px;border-radius:50%;flex:none}
+button,select,input{font:inherit;color:var(--tx)}
+.b{background:var(--ac);color:var(--on);border:0;border-radius:12px;padding:10px 14px;font-weight:600;cursor:pointer}.b.g{background:transparent;color:var(--ac);border:1px solid var(--ln)}.b.d{background:transparent;color:var(--bd);border:1px solid var(--ln)}
+.s{padding:5px 10px;font-size:13px;border-radius:9px}
+input,select{width:100%;padding:10px;border:1px solid var(--ln);border-radius:10px;background:var(--bg);margin:4px 0 10px}
+label{font-size:13px;color:var(--mu)}
+nav{position:fixed;bottom:0;left:0;right:0;background:var(--cd);border-top:1px solid var(--ln);display:flex;justify-content:space-around;padding:6px 4px calc(6px + env(safe-area-inset-bottom,0px));z-index:5}
+nav button{background:none;border:0;color:var(--mu);font-size:11px;display:flex;flex-direction:column;align-items:center;gap:2px;padding:4px 8px;cursor:pointer}nav button span{font-size:20px}nav button.on{color:var(--ac);font-weight:700}
+.fab{position:fixed;right:16px;bottom:calc(78px + env(safe-area-inset-bottom,0px));width:58px;height:58px;border-radius:50%;font-size:30px;line-height:1;box-shadow:0 4px 14px #0004;z-index:6;padding:0}
+#m{position:fixed;inset:0;background:#0007;display:none;align-items:flex-end;justify-content:center;z-index:20}#m.o{display:flex}
+.sh{background:var(--cd);width:100%;max-width:640px;border-radius:20px 20px 0 0;padding:18px 16px calc(18px + env(safe-area-inset-bottom,0px));max-height:88vh;overflow:auto}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 10px}.chip{border:1px solid var(--ln);border-radius:20px;padding:6px 12px;background:var(--bg);cursor:pointer;font-size:14px}.chip.on{background:var(--ac);color:var(--on);border-color:var(--ac)}
+.ch{display:flex;align-items:flex-end;gap:4px;height:110px}.ch div{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%;font-size:10px;color:var(--mu)}.ch i{width:100%;background:var(--ac);border-radius:4px 4px 0 0;min-height:2px}
+table{width:100%;border-collapse:collapse;font-size:13px}td,th{padding:6px 4px;border-bottom:1px solid var(--ln);text-align:right}td:first-child,th:first-child{text-align:left}
+.bub{padding:9px 12px;border-radius:14px;margin:6px 0;max-width:88%;white-space:pre-wrap}.me{background:var(--ac);color:var(--on);margin-left:auto}.pal{background:var(--cd);border:1px solid var(--ln)}
+.neg{color:var(--bd)}textarea{width:100%;min-height:150px;background:var(--bg);color:var(--tx);border:1px solid var(--ln);border-radius:10px;padding:8px}
+.pos{color:#16a34a}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .pos{color:#4ade80}}
+:root[data-theme="dark"] .pos{color:#4ade80}
+.sm{display:flex;gap:6px;text-align:center}.sm>div{flex:1;min-width:0}.sm b{font-size:15px;display:block;white-space:nowrap}
+.tb{width:100%;border-collapse:collapse;font-size:13px}.tb th,.tb td{text-align:center;padding:6px 4px;border:1px solid var(--ln)}.tb th{color:var(--mu);font-weight:600;background:rgba(127,127,127,.08)}.tb td{font-weight:700;white-space:nowrap}
+.hero.warn{border-color:var(--bd);background:rgba(220,38,38,.09)}
+:root{--ov:rgba(246,245,241,.28);--cdo:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ov:rgba(18,22,20,.55);--cdo:#1b211e}}
+:root[data-theme="dark"]{--ov:rgba(18,22,20,.55);--cdo:#1b211e}
+body::after{content:"";position:fixed;inset:0;z-index:-1;display:none}
+html.hasbg body{background:transparent}
+html.hasbg body::after{display:block;background:linear-gradient(var(--ov),var(--ov)),var(--bgimg) center/cover no-repeat}
+html.hasbg{--cd:rgba(255,255,255,.80)}
+@media (prefers-color-scheme:dark){html.hasbg:not([data-theme="light"]){--cd:rgba(27,33,30,.80)}}
+html.hasbg[data-theme="dark"]{--cd:rgba(27,33,30,.80)}
+html.hasbg .c,html.hasbg nav{backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+html.hasbg .sh{background:var(--cdo)}
+html.hasbg body::before{background:transparent}
+@media print{nav,.fab,button{display:none!important}}
+</style></head><body><main id="v"></main><button class="b fab" onclick="openLog()" aria-label="Log expense">+</button>
+<nav id="n"></nav><div id="m" onclick="if(event.target===this)cm()"><div class="sh" id="sh"></div></div>
+<script src="config.js"></script>
+<script>
+"use strict";
+const K="pocketpal1",E=["#ef4444","#f59e0b","#10b981","#3b82f6","#8b5cf6","#ec4899","#14b8a6","#f97316"];
+const R0={USD:1,AED:3.6725,EUR:.86,GBP:.75,INR:88,SAR:3.75,QAR:3.64,KWD:.307,BHD:.376,OMR:.385,PKR:281,BDT:122,LKR:300,PHP:58,EGP:48,JPY:150,CAD:1.4,AUD:1.52,CHF:.8,SGD:1.3,MYR:4.2,CNY:7.1,TRY:42,ZAR:17.5,NGN:1500,KES:129};
+const uid=()=>Math.random().toString(36).slice(2,9),$=s=>document.querySelector(s);
+const pad=n=>String(n).padStart(2,"0"),iso=d=>d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate()),P=s=>new Date(s+"T00:00:00");
+const TD=()=>{const d=new Date();d.setHours(0,0,0,0);return d};
+const sum=(a,f)=>a.reduce((s,x)=>s+f(x),0),cl=(x,a,b)=>Math.min(b,Math.max(a,x));
+let S,tab="home",chat=[{p:1,t:"Hi, I’m Pal. Ask me about your own numbers, like “Can I afford 60?” or “What’s due before payday?”"}];
+const D=()=>({base:"AED",cyc:"monthly",anchor:iso(new Date(new Date().getFullYear(),new Date().getMonth(),25)),income:0,rates:{...R0},
+pockets:[["Groceries",800],["Transport",300],["Eating out",300],["Fun",200]].map((x,i)=>({id:uid(),n:x[0],al:x[1],c:E[i]})),tx:[],inc:[],bills:[],goals:[],inst:[]});
+let fresh=false;try{const raw=localStorage.getItem(K);fresh=!raw;S=JSON.parse(raw||"null")}catch(e){}if(!S)S=D();norm();
+function norm(){S.inc=S.inc||[];S.tx=S.tx||[];S.pockets=S.pockets||[];S.bills=S.bills||[];S.goals=S.goals||[];S.inst=S.inst||[];S.rates=Object.assign({},R0,S.rates||{});S.ab=Object.assign({mode:"off",hours:6,time:"21:00",last:0,msg:""},S.ab||{})}
+const FS=()=>window.Capacitor&&window.Capacitor.Plugins&&window.Capacitor.Plugins.Filesystem;let bt;
+function diskBackup(){const f=FS();if(!f)return;const data=JSON.stringify(S);
+f.writeFile({path:"undiyal-auto.json",data,directory:"DATA",encoding:"utf8"}).catch(()=>{});
+f.writeFile({path:"Undiyal/undiyal-backup.json",data,directory:"DOCUMENTS",encoding:"utf8",recursive:true}).catch(()=>{})}
+const save=()=>{S.mt=Date.now();try{localStorage.setItem(K,JSON.stringify(S))}catch(e){}clearTimeout(bt);bt=setTimeout(diskBackup,800);try{if(SYS.on&&!NATIVE){clearTimeout(syT);syT=setTimeout(()=>syncNow(false),2500)}}catch(e){}};
+const fmt=(n,c=S.base)=>{try{return new Intl.NumberFormat(undefined,{style:"currency",currency:c,maximumFractionDigits:c==="JPY"?0:2}).format(n)}catch(e){return c+" "+n.toFixed(2)}};
+const conv=(a,c)=>c===S.base?a:a/S.rates[c]*S.rates[S.base];
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function fwd(d){const x=new Date(d);const t=S.cyc;if(t==="weekly")x.setDate(x.getDate()+7);else if(t==="biweekly")x.setDate(x.getDate()+14);
+else if(t==="semi"){if(x.getDate()<15)x.setDate(15);else{x.setMonth(x.getMonth()+1,1)}}
+else{const a=P(S.anchor).getDate();const m=new Date(x.getFullYear(),x.getMonth()+2,0).getDate();x.setDate(1);x.setMonth(x.getMonth()+1);x.setDate(Math.min(a,new Date(x.getFullYear(),x.getMonth()+1,0).getDate()))}return x}
+function back(d){const x=new Date(d);const t=S.cyc;if(t==="weekly")x.setDate(x.getDate()-7);else if(t==="biweekly")x.setDate(x.getDate()-14);
+else if(t==="semi"){if(x.getDate()>15)x.setDate(15);else if(x.getDate()===15)x.setDate(1);else x.setMonth(x.getMonth()-1,15)}
+else{const a=P(S.anchor).getDate();x.setDate(1);x.setMonth(x.getMonth()-1);x.setDate(Math.min(a,new Date(x.getFullYear(),x.getMonth()+1,0).getDate()))}return x}
+function cyc(){let p=P(S.anchor),t=TD();if(S.cyc==="semi"&&p>t)p=new Date(t);let g=0;while(p<=t&&g++<2000)p=fwd(p);g=0;while(back(p)>t&&g++<2000)p=back(p);const s=back(p);return{s,e:p,len:Math.round((p-s)/864e5)}}
+const inR=(t,s,e)=>t.d>=iso(s)&&t.d<iso(e),spent=(s,e,pid)=>sum(S.tx.filter(t=>inR(t,s,e)&&(!pid||t.p===pid)),t=>t.a);
+const al=()=>sum(S.pockets,p=>p.al),inc=(s,e)=>sum(S.inc.filter(t=>inR(t,s,e)),t=>t.a);
+function dueBills(c){const out=[],t=TD();S.bills.forEach(b=>{let d=new Date(t.getFullYear(),t.getMonth(),Math.min(b.day,28));if(d<t)d=new Date(t.getFullYear(),t.getMonth()+1,Math.min(b.day,28));
+const ym=d.getFullYear()+"-"+pad(d.getMonth()+1);if(b.paid===ym)return;if(d<c.e)out.push({b,d})});return out.sort((a,b)=>a.d-b.d)}
+function streak(){const ds=new Set(S.tx.map(t=>t.d));let d=TD(),n=0;if(!ds.has(iso(d)))d.setDate(d.getDate()-1);while(ds.has(iso(d))){n++;d.setDate(d.getDate()-1)}return n}
+const dshort=d=>d.toLocaleDateString(undefined,{day:"numeric",month:"short"});
+function go(t){tab=t;render()}
+function render(){const T={home,pockets,plan,insights,pal};$("#v").innerHTML=T[tab]();
+$("#n").innerHTML=[["home","🏠","Home"],["pockets","🎨","Pockets"],["plan","📅","Plan"],["insights","📊","Insights"],["pal","💬","Pal"]].map(x=>`<button class="${tab===x[0]?"on":""}" onclick="go('${x[0]}')"><span>${x[1]}</span>${x[2]}</button>`).join("");scrollTo(0,0)}
+function logo(z,f=1){f=cl(f,0,1);const y=58-36*f;return`<svg width="${z}" height="${z}" viewBox="0 0 64 64" aria-label="Undiyal"><defs><clipPath id="uc${z}"><path d="M20 22Q8 32 14 48Q18 58 32 58Q46 58 50 48Q56 32 44 22Z"/></clipPath></defs><g clip-path="url(#uc${z})"><rect x="4" y="${y}" width="56" height="40" fill="var(--ac)" opacity=".35"/></g><path d="M20 22Q8 32 14 48Q18 58 32 58Q46 58 50 48Q56 32 44 22Z" fill="none" stroke="var(--ac)" stroke-width="3" stroke-linejoin="round"/><rect x="22" y="15" width="20" height="8" rx="3" fill="var(--ac)"/><line x1="28" y1="19" x2="36" y2="19" stroke="var(--bg)" stroke-width="2" stroke-linecap="round"/><circle cx="32" cy="7" r="5" fill="#f59e0b"/></svg>`}
+function home(){const c=cyc(),a=al(),sp=spent(c.s,c.e),left=a-sp,days=Math.max(1,Math.round((c.e-TD())/864e5)),du=dueBills(c),dsum=sum(du,x=>x.b.amt),kept=Math.max(0,left),pct=a?cl(left/a,0,1):0,lv=Math.min(5,1+Math.floor(S.tx.length/25)),st=streak(),ri=inc(c.s,c.e),bal=ri-sp,tr=sum(S.inc,t=>t.a),ts=sum(S.tx,t=>t.a),le=cyl(c),warn=S.inc.length>0&&bal<left;
+return`<div class="row"><span class="row" style="gap:6px">${logo(34)}<b style="font-size:20px">Undiyal</b></span><button class="b g s" onclick="settings()">⚙ Settings</button></div>${syChip()}
+<div class="c hero${warn||left<0?" warn":""}"><div class="mu">Left to spend before payday</div><div class="big ${left<0||warn?"neg":""}">${fmt(left)}</div>${warn?`<div class="neg" style="font-size:13px;font-weight:600;margin-top:2px">⚠ Balance ${fmt(bal)} is lower than left to spend</div>`:""}<div class="mu">${days} day${days>1?"s":""} to payday (${dshort(c.e)}) · about ${fmt(Math.max(0,left-dsum)/days)}/day after bills</div>
+<div class="bar"><i style="width:${pct*100}%;background:var(--ac)"></i></div></div>
+<div class="c"><div class="mu" style="text-align:center;margin-bottom:8px"><b style="color:var(--tx);font-size:16px">${mlab(le)}</b> · ${dshort(c.s)} – ${dshort(le)}</div>
+<div class="sm"><div><div class="mu">Received</div><b class="pos">${fmt(ri)}</b></div><div><div class="mu">Spent</div><b class="neg">${fmt(sp)}</b></div><div><div class="mu">Balance</div><b class="${bal<0?"neg":"pos"}">${fmt(bal)}</b></div></div>
+<table class="tb" style="margin-top:12px"><tr><th colspan="3">All time</th></tr><tr><th>Received</th><th>Spent</th><th>Balance</th></tr><tr><td class="pos">${fmt(tr)}</td><td class="neg">${fmt(ts)}</td><td class="${tr-ts<0?"neg":"pos"}">${fmt(tr-ts)}</td></tr></table>
+<button class="b g s" style="width:100%;margin-top:10px" onclick="openInc()">+ Add money received</button></div>
+<div class="c row"><div>${logo(60,pct)}</div><div class="r"><b>Level ${lv} · ${["Seedling","Saver","Squirrel","Pro","Legend"][lv-1]}</b><div class="mu">🔥 ${st}-day logging streak · undiyal holds ${fmt(kept)}</div></div></div>
+${du.length?`<div class="c"><b>Due before payday: ${fmt(dsum)}</b><div class="mu">${du.map(x=>esc(x.b.n)+" "+dshort(x.d)).join(" · ")}</div></div>`:""}
+<h2>Pockets</h2>${S.pockets.map(p=>{const l=p.al-spent(c.s,c.e,p.id);return`<div class="c" onclick="openLog('${p.id}')"><div class="row"><span class="row"><i class="dot" style="background:${p.c}"></i>${esc(p.n)}</span><b class="${l<0?"neg":""}">${fmt(l)}</b></div><div class="bar"><i style="width:${p.al?cl(l/p.al,0,1)*100:0}%;background:${p.c}"></i></div></div>`}).join("")||'<div class="c mu">No pockets yet. Add some in Pockets.</div>'}
+<h2>Recent</h2>${recent()}`}
+function recent(){const it=S.tx.map(t=>({...t,k:0})).concat(S.inc.map(t=>({...t,k:1}))).sort((x,y)=>y.d.localeCompare(x.d)||y.id.localeCompare(x.id)).slice(0,10);
+return it.map(t=>{if(t.k)return`<div class="c row" onclick="incMenu('${t.id}')"><span class="row"><i class="dot" style="background:#16a34a"></i><span>${esc(t.note||"Money received")}<div class="mu">${t.d} · Received</div></span></span><span class="r pos">+${fmt(t.a)}${t.c!==S.base?`<div class="mu">${fmt(t.o,t.c)}</div>`:""}</span></div>`;
+const p=S.pockets.find(q=>q.id===t.p)||{n:"?",c:"#999"};return`<div class="c row" onclick="txMenu('${t.id}')"><span class="row"><i class="dot" style="background:${p.c}"></i><span>${esc(t.note||p.n)}<div class="mu">${t.d} · ${esc(p.n)}</div></span></span><span class="r">-${fmt(t.a)}${t.c!==S.base?`<div class="mu">${fmt(t.o,t.c)}</div>`:""}</span></div>`}).join("")||'<div class="c mu">Tap + to log money received or an expense.</div>'}
+function openInc(eid){const e=eid&&S.inc.find(x=>x.id===eid),c0=e?e.c:S.base;
+window.saveInc=()=>{const o=+$("#ii_a").value;if(!(o>0))return;const cu=$("#ii_c").value,v={d:$("#ii_d").value||iso(TD()),o,c:cu,a:(e&&e.o===o&&e.c===cu)?e.a:conv(o,cu),note:$("#ii_n").value.trim(),u:Date.now()};if(e)Object.assign(e,v);else S.inc.push({id:uid(),...v});save();cm();render()};
+om(`${e?'<h3 style="margin:0 0 8px">Edit money received</h3>':'<div class="chips"><span class="chip" onclick="openLog()">Expense</span><span class="chip on">Money received</span></div>'}<label>Amount received</label><div class="row"><input id="ii_a" type="number" inputmode="decimal" step="0.01" placeholder="0.00" value="${e?e.o:""}" style="flex:2"><select id="ii_c" style="flex:1">${Object.keys(S.rates).map(k=>`<option ${k===c0?"selected":""}>${k}</option>`).join("")}</select></div>
+<div class="chips">${["Salary","Bonus","Gift","Refund","Other"].map(x=>`<span class="chip" onclick="$('#ii_n').value='${x}'">${x}</span>`).join("")}</div><label>Source / note</label><input id="ii_n" placeholder="Where did it come from?" value="${e?esc(e.note||""):""}"><label>Date</label><input id="ii_d" type="date" value="${e?e.d:iso(TD())}"><button class="b" style="width:100%" onclick="saveInc()">${e?"Save changes":"Save"}</button>`);
+if(!e)setTimeout(()=>{const x=$("#ii_a");x&&x.focus()},50)}
+function incMenu(id){const t=S.inc.find(x=>x.id===id);if(!t)return;
+om(`<h3 style="margin:0 0 4px">${esc(t.note||"Money received")}</h3><p class="mu" style="margin:0 0 12px">${t.d} · Received<br><b class="pos" style="font-size:18px">+${fmt(t.a)}</b>${t.c!==S.base?` (${fmt(t.o,t.c)})`:""}</p><div class="row"><button class="b" style="flex:1" onclick="openInc('${id}')">Edit</button><button class="b d" style="flex:1" onclick="if(confirm('Delete this entry?')){S.inc=S.inc.filter(x=>x.id!=='${id}');save();cm();render()}">Delete</button><button class="b g" style="flex:1" onclick="cm()">Keep</button></div>`)}
+function openLog(pid,eid){const c=cyc();if(!S.pockets.length){go("pockets");return}const e=eid&&S.tx.find(x=>x.id===eid);let sel=e?e.p:(pid||S.pockets[0].id);if(!S.pockets.find(p=>p.id===sel))sel=S.pockets[0].id;
+const spk=k=>sum(S.tx.filter(t=>t!==e&&inR(t,c.s,c.e)&&t.p===k),t=>t.a);
+window.lp=()=>{const a=conv(+($("#la").value)||0,$("#lc").value),p=S.pockets.find(x=>x.id===sel),l=p.al-spk(sel);$("#lv").innerHTML=`${esc(p.n)} would have <b class="${l-a<0?"neg":""}">${fmt(l-a)}</b> left (now ${fmt(l)})`;document.querySelectorAll(".pk").forEach(x=>x.classList.toggle("on",x.dataset.i===sel))};
+window.pick=i=>{sel=i;lp()};
+window.saveTx=()=>{const o=+$("#la").value;if(!(o>0))return;const cu=$("#lc").value,v={d:$("#ld").value||iso(TD()),p:sel,o,c:cu,a:(e&&e.o===o&&e.c===cu)?e.a:conv(o,cu),note:$("#ln").value.trim(),u:Date.now()};if(e)Object.assign(e,v);else S.tx.push({id:uid(),...v});save();cm();render()};
+const c0=e?e.c:S.base;
+om(`${e?'<h3 style="margin:0 0 8px">Edit expense</h3>':'<div class="chips"><span class="chip on">Expense</span><span class="chip" onclick="openInc()">Money received</span></div>'}<label>Amount</label><div class="row"><input id="la" type="number" inputmode="decimal" step="0.01" placeholder="0.00" value="${e?e.o:""}" oninput="lp()" style="flex:2"><select id="lc" onchange="lp()" style="flex:1">${Object.keys(S.rates).map(k=>`<option ${k===c0?"selected":""}>${k}</option>`).join("")}</select></div>
+<label>Pocket</label><div class="chips">${S.pockets.map(p=>`<span class="chip pk" data-i="${p.id}" onclick="pick('${p.id}')"><i class="dot" style="background:${p.c};display:inline-block"></i> ${esc(p.n)}</span>`).join("")}</div><div id="lv" class="mu" style="margin-bottom:10px"></div>
+<label>Note</label><input id="ln" placeholder="What was it?" value="${e?esc(e.note||""):""}"><label>Date</label><input id="ld" type="date" value="${e?e.d:iso(TD())}"><button class="b" style="width:100%" onclick="saveTx()">${e?"Save changes":"Save"}</button>`);lp();if(!e)setTimeout(()=>{const x=$("#la");x&&x.focus()},50)}
+function txMenu(id){const t=S.tx.find(x=>x.id===id);if(!t)return;const p=S.pockets.find(q=>q.id===t.p)||{n:"?"};
+om(`<h3 style="margin:0 0 4px">${esc(t.note||p.n)}</h3><p class="mu" style="margin:0 0 12px">${t.d} · ${esc(p.n)}<br><b style="color:var(--tx);font-size:18px">-${fmt(t.a)}</b>${t.c!==S.base?` (${fmt(t.o,t.c)})`:""}</p><div class="row"><button class="b" style="flex:1" onclick="openLog(null,'${id}')">Edit</button><button class="b d" style="flex:1" onclick="if(confirm('Delete this entry?')){S.tx=S.tx.filter(x=>x.id!=='${id}');save();cm();render()}">Delete</button><button class="b g" style="flex:1" onclick="cm()">Keep</button></div>`)}
+const om=h=>{$("#sh").innerHTML=h;$("#m").classList.add("o")},cm=()=>$("#m").classList.remove("o");
+function form(title,f,cb,del){window.fs=()=>{const v={};f.forEach(x=>{const e=$("#f_"+x.k);v[x.k]=x.t==="number"?+e.value:e.value});cb(v);save();cm();render()};
+om(`<h3 style="margin:0 0 8px">${title}</h3>${f.map(x=>`<label>${x.l}</label>${x.t==="select"?`<select id="f_${x.k}">${x.o.map(o=>`<option value="${o[0]}" ${o[0]==x.v?"selected":""}>${o[1]}</option>`).join("")}</select>`:`<input id="f_${x.k}" type="${x.t||"text"}" ${x.t==="number"?'step="any" inputmode="decimal"':""} value="${esc(x.v??"")}">`}`).join("")}<div class="row"><button class="b" style="flex:1" onclick="fs()">Save</button>${del?`<button class="b d" onclick="${del};save();cm();render()">Delete</button>`:""}</div>`)}
+const cp=(id,i)=>`<div class="chips">${E.map(c=>`<span class="chip" style="background:${c};width:30px;height:30px;padding:0" onclick="$('#f_c').value='${c}'"></span>`).join("")}</div>`;
+function pockets(){const a=al();return`<h2>Pockets <button class="b s" onclick="editP()">+ Add</button></h2>
+<div class="c"><div class="row"><span>Payday amount</span><b>${fmt(S.income)}</b></div><div class="row mu"><span>Allocated ${fmt(a)}</span><span class="${S.income&&a>S.income?"neg":""}">${S.income?(a>S.income?"Over by ":"Unallocated ")+fmt(Math.abs(S.income-a)):"Set payday amount in Settings"}</span></div></div>
+${S.pockets.map(p=>`<div class="c row" onclick="editP('${p.id}')"><span class="row"><i class="dot" style="background:${p.c}"></i>${esc(p.n)}</span><b>${fmt(p.al)}</b></div>`).join("")}`}
+function editP(id){const p=S.pockets.find(x=>x.id===id)||{n:"",al:0,c:E[S.pockets.length%8]};form(id?"Edit pocket":"New pocket",[{k:"n",l:"Name",v:p.n},{k:"al",l:"Amount per pay cycle ("+S.base+")",t:"number",v:p.al},{k:"c",l:"Colour (tap below)",v:p.c}],v=>{if(!v.n)return;if(id)Object.assign(p,v);else S.pockets.push({id:uid(),...v})},id?`S.pockets=S.pockets.filter(x=>x.id!=='${id}')`:"");$("#sh").insertAdjacentHTML("afterbegin",cp())}
+function plan(){const c=cyc(),mi=sum(S.inst.filter(i=>i.left>0),i=>i.amt),du=dueBills(c),now=new Date();
+const yr=Array.from({length:12},(_,i)=>({l:new Date(now.getFullYear(),now.getMonth()+i,1).toLocaleDateString(undefined,{month:"short"}).slice(0,3),v:sum(S.inst,x=>x.left>i?x.amt:0)}));
+return`<h2>Bills <button class="b s" onclick="editB()">+ Add</button></h2>${S.bills.map(b=>{const d=du.find(x=>x.b===b);return`<div class="c row"><span onclick="editB('${b.id}')">${esc(b.name||b.n)}<div class="mu">Day ${b.day} monthly${d?" · due "+dshort(d.d)+" (before payday)":""}</div></span><span class="r"><b>${fmt(b.amt)}</b> ${d?`<button class="b s" onclick="payB('${b.id}')">Pay</button>`:""}</span></div>`}).join("")||'<div class="c mu">Add rent, subscriptions, utilities…</div>'}
+<h2>Goals <button class="b s" onclick="editG()">+ Add</button></h2>${S.goals.map(g=>{const r=g.target-g.saved,m=g.per>0?Math.ceil(r/g.per):null,e=m!==null&&r>0?new Date(now.getFullYear(),now.getMonth()+m,1).toLocaleDateString(undefined,{month:"long",year:"numeric"}):null;return`<div class="c" onclick="editG('${g.id}')"><div class="row"><b>${esc(g.n)}</b><span>${fmt(g.saved)} / ${fmt(g.target)}</span></div><div class="bar"><i style="width:${cl(g.saved/g.target,0,1)*100}%;background:var(--ac)"></i></div><div class="mu">${r<=0?"Reached 🎉":e?"On track for "+e+" at "+fmt(g.per)+"/month":"Set a monthly amount to see your date"}</div></div>`}).join("")||'<div class="c mu">Save for something specific.</div>'}
+<h2>Instalments <button class="b s" onclick="editI()">+ Add</button></h2><div class="c"><div class="row"><span>Monthly payments</span><b>${fmt(mi)}</b></div><div class="ch" style="margin-top:10px">${yr.map(y=>`<div><i style="height:${mi?y.v/mi*85:2}%"></i>${y.l}</div>`).join("")}</div></div>
+${S.inst.map(i=>`<div class="c row" onclick="editI('${i.id}')"><span>${esc(i.n)}<div class="mu">${i.left} month${i.left!==1?"s":""} left</div></span><b>${fmt(i.amt)}</b></div>`).join("")}`}
+function editB(id){const b=S.bills.find(x=>x.id===id)||{name:"",amt:0,day:1,pk:S.pockets[0]?.id};form(id?"Edit bill":"New bill",[{k:"name",l:"Name",v:b.name||b.n},{k:"amt",l:"Amount ("+S.base+")",t:"number",v:b.amt},{k:"day",l:"Day of month (1-28)",t:"number",v:b.day},{k:"pk",l:"Pocket it comes from",t:"select",o:S.pockets.map(p=>[p.id,p.n]),v:b.pk}],v=>{if(!v.name)return;if(id)Object.assign(b,v);else S.bills.push({id:uid(),...v})},id?`S.bills=S.bills.filter(x=>x.id!=='${id}')`:"")}
+function payB(id){const b=S.bills.find(x=>x.id===id),t=TD();let d=new Date(t.getFullYear(),t.getMonth(),Math.min(b.day,28));if(d<t)d=new Date(t.getFullYear(),t.getMonth()+1,Math.min(b.day,28));b.paid=d.getFullYear()+"-"+pad(d.getMonth()+1);S.tx.push({id:uid(),d:iso(t),p:b.pk||S.pockets[0].id,o:b.amt,c:S.base,a:b.amt,note:b.name});save();render()}
+function editG(id){const g=S.goals.find(x=>x.id===id)||{n:"",target:0,saved:0,per:0};form(id?"Edit goal":"New goal",[{k:"n",l:"Goal",v:g.n},{k:"target",l:"Target",t:"number",v:g.target},{k:"saved",l:"Saved so far",t:"number",v:g.saved},{k:"per",l:"Monthly contribution",t:"number",v:g.per}],v=>{if(!v.n||!(v.target>0))return;if(id)Object.assign(g,v);else S.goals.push({id:uid(),...v})},id?`S.goals=S.goals.filter(x=>x.id!=='${id}')`:"")}
+function editI(id){const i=S.inst.find(x=>x.id===id)||{n:"",amt:0,left:12};form(id?"Edit instalment":"New instalment",[{k:"n",l:"Name",v:i.n},{k:"amt",l:"Monthly payment",t:"number",v:i.amt},{k:"left",l:"Months remaining",t:"number",v:i.left}],v=>{if(!v.n)return;if(id)Object.assign(i,v);else S.inst.push({id:uid(),...v})},id?`S.inst=S.inst.filter(x=>x.id!=='${id}')`:"")}
+function insights(){const c=cyc(),a=al(),sp=spent(c.s,c.e),el=Math.max(1,Math.round((TD()-c.s)/864e5)+1),proj=sp/el*c.len,tx=S.tx.filter(t=>inR(t,c.s,c.e));
+const days=Array.from({length:14},(_,i)=>{const d=new Date(TD());d.setDate(d.getDate()-13+i);const k=iso(d);return{l:d.getDate(),v:sum(S.tx.filter(t=>t.d===k),t=>t.a)}}),mx=Math.max(1,...days.map(d=>d.v));
+const rec=[];let b=c.s;for(let i=0;i<6;i++){const p=back(b);const s=spent(p,b);if(s>0||i<2)rec.push({l:dshort(p),s,k:a-s});b=p}
+const cur={};tx.forEach(t=>cur[t.c]=(cur[t.c]||0)+t.o);const big=tx.slice().sort((x,y)=>y.a-x.a).slice(0,5);
+return`<div class="row"><h2 style="margin-bottom:0">Dashboard</h2><button class="b g s" onclick="exp()">Export CSV</button></div>
+<div class="c"><div class="row"><span><div class="mu">Spent this cycle</div><b style="font-size:24px">${fmt(sp)}</b></span><span class="r"><div class="mu">Budget</div><b>${fmt(a)}</b></span></div>
+<div class="mu" style="margin-top:6px">Avg ${fmt(sp/el)}/day · projected ${fmt(proj)} by payday · <span class="${proj>a?"neg":""}">${a?(proj>a?"over budget by "+fmt(proj-a):"under by "+fmt(a-proj)):""}</span></div></div>
+<div class="c"><div class="mu" style="text-align:center;margin-bottom:8px"><b style="color:var(--tx);font-size:16px">${mlab(cyl(c))}</b></div><div class="sm"><div><div class="mu">Received</div><b class="pos">${fmt(inc(c.s,c.e))}</b></div><div><div class="mu">Spent</div><b class="neg">${fmt(sp)}</b></div><div><div class="mu">Balance</div><b class="${inc(c.s,c.e)-sp<0?"neg":"pos"}">${fmt(inc(c.s,c.e)-sp)}</b></div></div></div>
+<h2>Spending by pocket</h2><div class="c">${S.pockets.map(p=>{const s=spent(c.s,c.e,p.id);return`<div style="margin-bottom:10px"><div class="row"><span class="row"><i class="dot" style="background:${p.c}"></i>${esc(p.n)}</span><span>${fmt(s)} <span class="mu">${sp?Math.round(s/sp*100):0}%</span></span></div><div class="bar"><i style="width:${sp?s/sp*100:0}%;background:${p.c}"></i></div></div>`}).join("")}</div>
+<h2>Last 14 days</h2><div class="c"><div class="ch">${days.map(d=>`<div><i style="height:${d.v/mx*80}%"></i>${d.l}</div>`).join("")}</div></div>
+${Object.keys(cur).length>1?`<h2>By currency (as paid)</h2><div class="c">${Object.keys(cur).map(k=>`<div class="row"><span>${k}</span><b>${fmt(cur[k],k)}</b></div>`).join("")}</div>`:""}
+<h2>Biggest this cycle</h2><div class="c">${big.map(t=>`<div class="row"><span>${esc(t.note||(S.pockets.find(p=>p.id===t.p)||{}).n)}</span><b>${fmt(t.a)}</b></div>`).join("")||'<span class="mu">Nothing logged yet.</span>'}</div>
+<h2>Cycle recaps</h2><div class="c"><table><tr><th>Cycle from</th><th>Spent</th><th>Kept</th></tr>${rec.map(r=>`<tr><td>${r.l}</td><td>${fmt(r.s)}</td><td class="${r.k<0?"neg":""}">${fmt(r.k)}</td></tr>`).join("")}</table></div><button class="b g" style="width:100%" onclick="print()">Print / save report as PDF</button>`}
+function exp(){const q=x=>'"'+String(x??"").replace(/"/g,'""')+'"';const rows=["type,date,pocket,note,amount_"+S.base+",original,currency"].concat(
+S.tx.concat(S.inc.map(t=>({...t,i:1}))).sort((a,b)=>a.d.localeCompare(b.d)).map(t=>[t.i?"received":"spent",t.d,t.i?"":(S.pockets.find(p=>p.id===t.p)||{}).n,t.note,t.a.toFixed(2),t.o,t.c].map(q).join(",")));showText("Export (CSV)",rows.join("\n"))}
+function showText(t,v,cb){window.cb2=cb;om(`<h3 style="margin:0 0 8px">${t}</h3><textarea id="tt">${esc(v)}</textarea><div class="row" style="margin-top:8px"><button class="b" onclick="${cb?"cb2($('#tt').value)":"try{navigator.clipboard.writeText($('#tt').value)}catch(e){$('#tt').select()};cm()"}">${cb?"Restore":"Copy"}</button><button class="b g" onclick="cm()">Close</button></div>`)}
+function pal(){return`<h2>Ask Pal</h2>${chat.map(m=>`<div class="bub ${m.p?"pal":"me"}">${esc(m.t)}</div>`).join("")}<div class="chips">${["What’s left?","What’s due before payday?","Can I afford 50?","Where did I spend most?"].map(q=>`<span class="chip" onclick="ask('${q}')">${q}</span>`).join("")}</div><div class="row"><input id="pq" placeholder="Ask about your money" onkeydown="if(event.key==='Enter')ask()" style="margin:0"><button class="b" onclick="ask()">Send</button></div>`}
+function ask(q){q=q||$("#pq").value.trim();if(!q)return;chat.push({t:q});chat.push({p:1,t:ans(q)});render()}
+function ans(q){const l=q.toLowerCase(),c=cyc(),left=al()-spent(c.s,c.e),days=Math.max(1,Math.round((c.e-TD())/864e5)),du=dueBills(c),ds=sum(du,x=>x.b.amt),n=(q.match(/[\d.]+/)||[])[0];
+const pk=S.pockets.find(p=>l.includes(p.n.toLowerCase()));
+if(/afford|buy|can i spend/.test(l)&&n){const a=+n,f=left-ds;return a<=f?`Yes. After ${fmt(ds)} of bills due, you’d still have ${fmt(f-a)} for ${days} days (about ${fmt((f-a)/days)}/day).`:`That would leave you ${fmt(a-f)} short after upcoming bills. You have ${fmt(f)} free until payday.`}
+if(/receiv|income|balance|earn/.test(l)){const ri=inc(c.s,c.e),sp=spent(c.s,c.e);return`This cycle you received ${fmt(ri)} and spent ${fmt(sp)}, so your balance is ${fmt(ri-sp)}.`}
+if(/due|bill/.test(l))return du.length?`Before payday: ${du.map(x=>x.b.name+" "+fmt(x.b.amt)+" on "+dshort(x.d)).join(", ")}. Total ${fmt(ds)}.`:"Nothing due before payday.";
+if(/most|top|biggest/.test(l)){const r=S.pockets.map(p=>({p,s:spent(c.s,c.e,p.id)})).sort((a,b)=>b.s-a.s)[0];return r&&r.s>0?`Most of this cycle went to ${r.p.n}: ${fmt(r.s)}.`:"No spending logged this cycle yet."}
+if(pk)return`${pk.n} has ${fmt(pk.al-spent(c.s,c.e,pk.id))} left of ${fmt(pk.al)}.`;
+if(/left|remain|payday/.test(l))return`You have ${fmt(left)} left, with ${days} day${days>1?"s":""} until payday on ${dshort(c.e)}. After bills that’s about ${fmt(Math.max(0,left-ds)/days)}/day.`;
+return"I can answer: what’s left, what’s due before payday, whether you can afford an amount, a pocket’s balance, or where you spent most."}
+function settings(){const mk=(a,b)=>[a,b];form("Settings",[{k:"base",l:"Main currency",t:"select",o:Object.keys(S.rates).map(k=>[k,k]),v:S.base},{k:"income",l:"Payday amount (in main currency)",t:"number",v:S.income},{k:"cyc",l:"Pay cycle",t:"select",v:S.cyc,o:[mk("weekly","Weekly"),mk("biweekly","Every two weeks"),mk("semi","Twice a month (1st & 15th)"),mk("monthly","Monthly")]},{k:"anchor",l:"A payday date (past or next)",t:"date",v:S.anchor}],v=>{Object.assign(S,v)});
+$("#sh").insertAdjacentHTML("beforeend",`<div class="row" style="margin-top:10px"><button class="b g s" onclick="rates()">Exchange rates</button><button class="b g s" onclick="bk()">Backup</button><button class="b g s" onclick="rs()">Restore</button></div><div class="row" style="margin-top:10px">${NATIVE?'<button class="b g s" onclick="autoBk()">Auto backup</button>':'<button class="b g s" onclick="cloudSheet()">☁ Cloud sync</button>'}<button class="b g s" onclick="bgSheet()">Background picture</button></div>${installRow()}<div class="row" style="margin-top:10px"><button class="b g s" onclick="cycleTheme(this)">Theme: ${themeName()}</button><button class="b d s" onclick="if(confirm('Erase all data?')){S=D();save();cm();render()}">Reset</button></div>`)}
+function rates(){form("Exchange rates (units per 1 USD)",Object.keys(S.rates).map(k=>({k,l:k,t:"number",v:S.rates[k]})),v=>{Object.keys(v).forEach(k=>{if(v[k]>0)S.rates[k]=v[k]})})}
+const bk=async()=>{const j=JSON.stringify(S),fn="undiyal-backup-"+stamp()+".json",f=FS();
+if(f){f.writeFile({path:"Undiyal/"+fn,data:j,directory:"DOCUMENTS",encoding:"utf8",recursive:true}).then(()=>alert("Backup saved on this phone:\nDocuments/Undiyal/"+fn)).catch(()=>showText("Backup (copy and keep safe)",j));return}
+try{const file=new File([j],fn,{type:"application/json"});if(matchMedia("(pointer:coarse)").matches&&navigator.canShare&&navigator.canShare({files:[file]})){await navigator.share({files:[file],title:"Undiyal backup"});return}}catch(e){if(e&&e.name==="AbortError")return}
+try{const u=URL.createObjectURL(new Blob([j],{type:"application/json"})),a=document.createElement("a");a.href=u;a.download=fn;document.body.appendChild(a);a.click();a.remove()}catch(e){showText("Backup (copy and keep safe)",j)}};
+const rs=()=>{window.cb3=t=>{try{const d=JSON.parse(t);if(!d.pockets)throw 0;S=d;norm();save();cm();render()}catch(e){alert("That doesn’t look like a backup.")}};
+om(`<h3 style="margin:0 0 8px">Restore backup</h3><label>Choose a backup file from this phone</label><input type="file" accept=".json,application/json,text/plain" onchange="const f=this.files[0];if(f){const r=new FileReader();r.onload=()=>cb3(r.result);r.readAsText(f)}"><label>Or paste backup text</label><textarea id="tt"></textarea><div class="row" style="margin-top:8px"><button class="b" onclick="cb3($('#tt').value)">Restore</button><button class="b g" onclick="cm()">Close</button></div>`)};
+if(fresh&&FS()){FS().readFile({path:"undiyal-auto.json",directory:"DATA",encoding:"utf8"}).then(r=>{const d=JSON.parse(r.data);if(d&&d.pockets){S=d;norm();try{localStorage.setItem(K,JSON.stringify(S))}catch(e){}render()}}).catch(()=>{})}
+
+const MN=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],TK="undiyal_theme",BK="undiyal_bg";
+function mlab(d){return MN[d.getMonth()]+"-"+d.getFullYear()}
+function cyl(c){const x=new Date(c.e);x.setDate(x.getDate()-1);return x}
+function stamp(){const d=new Date();return iso(d)+"_"+pad(d.getHours())+"-"+pad(d.getMinutes())}
+/* theme */
+function themeName(){let t=null;try{t=localStorage.getItem(TK)}catch(e){}return t==="light"?"Light":t==="dark"?"Dark":"Auto"}
+function applyTheme(){let t=null;try{t=localStorage.getItem(TK)}catch(e){}if(t==="light"||t==="dark")document.documentElement.dataset.theme=t;else delete document.documentElement.dataset.theme}
+function cycleTheme(btn){const n={Auto:"light",Light:"dark",Dark:"auto"}[themeName()];try{localStorage.setItem(TK,n)}catch(e){}applyTheme();if(btn)btn.textContent="Theme: "+themeName()}
+/* background picture */
+function applyBg(){let d=null;try{d=localStorage.getItem(BK)}catch(e){}const r=document.documentElement;if(d){r.style.setProperty("--bgimg",'url("'+d+'")');r.classList.add("hasbg")}else{r.style.removeProperty("--bgimg");r.classList.remove("hasbg")}}
+function bgSheet(){om(`<h3 style="margin:0 0 8px">Background picture</h3><p class="mu" style="margin:0 0 10px">Pick a photo from your gallery to use as the app background.</p><input type="file" accept="image/*" onchange="pickBg(this.files[0])"><div class="row" style="margin-top:8px"><button class="b d" onclick="try{localStorage.removeItem(BK)}catch(e){};applyBg();cm()">Remove picture</button><button class="b g" onclick="cm()">Close</button></div>`)}
+function pickBg(f){if(!f)return;const u=URL.createObjectURL(f),im=new Image();im.onload=()=>{const s=Math.min(1,1280/Math.max(im.width,im.height)),cv=document.createElement("canvas");cv.width=Math.round(im.width*s);cv.height=Math.round(im.height*s);cv.getContext("2d").drawImage(im,0,0,cv.width,cv.height);URL.revokeObjectURL(u);try{localStorage.setItem(BK,cv.toDataURL("image/jpeg",.78));applyBg();cm()}catch(e){alert("That picture is too large to save. Please try a smaller one.")}};im.onerror=()=>alert("Couldn’t read that picture.");im.src=u}
+/* scheduled auto backup (runs while the app is open, and catches up when it is opened) */
+let abBusy=false;
+function abDue(){const a=S.ab,n=Date.now();if(a.mode==="hours")return n-a.last>=a.hours*36e5;
+if(a.mode==="daily"){const [h,m]=String(a.time||"21:00").split(":").map(Number),t=new Date();t.setHours(h,m,0,0);if(t.getTime()>n)t.setDate(t.getDate()-1);return a.last<t.getTime()}return false}
+async function runAuto(){const f=FS();if(!f)return false;const a=S.ab,data=JSON.stringify(S),fn="undiyal-auto-"+stamp()+".json";let where="";
+try{await f.writeFile({path:"Undiyal/auto/"+fn,data,directory:"DOCUMENTS",encoding:"utf8",recursive:true});where="Documents/Undiyal/auto"}
+catch(e){try{await f.writeFile({path:"backups/"+fn,data,directory:"DATA",encoding:"utf8",recursive:true});where="inside the app (Documents not allowed)"}catch(e2){a.msg="Failed at "+new Date().toLocaleString();save();return false}}
+a.last=Date.now();a.msg=where;save();
+try{for(const d of [["Undiyal/auto","DOCUMENTS"],["backups","DATA"]]){const r=await f.readdir({path:d[0],directory:d[1]}),fl=(r.files||[]).map(x=>x.name||x).filter(n=>/^undiyal-auto-/.test(n)).sort();for(const n of fl.slice(0,Math.max(0,fl.length-10)))await f.deleteFile({path:d[0]+"/"+n,directory:d[1]})}}catch(e){}
+return true}
+async function abCheck(){if(!FS()||S.ab.mode==="off"||abBusy)return;if(abDue()){abBusy=true;try{await runAuto()}finally{abBusy=false}}}
+function autoBk(){const a=S.ab;
+window.abUi=()=>{const m=$("#ab_m").value;$("#ab_hw").style.display=m==="hours"?"block":"none";$("#ab_tw").style.display=m==="daily"?"block":"none"};
+window.abSave=()=>{const m=$("#ab_m").value,hr=+$("#ab_h").value,t=$("#ab_t").value||"21:00",ch=m!==a.mode||hr!==a.hours||t!==a.time;a.mode=m;a.hours=hr;a.time=t;if(ch&&m!=="off")a.last=Date.now();save();try{FS()&&FS().requestPermissions().catch(()=>{})}catch(e){}cm()};
+window.abNow=async()=>{if(!FS()){bk();return}try{FS().requestPermissions().catch(()=>{})}catch(e){}const ok=await runAuto();alert(ok?"Backup saved in "+S.ab.msg:"Backup failed. Use Settings > Backup instead.");autoBk()};
+om(`<h3 style="margin:0 0 8px">Auto backup</h3><label>Backup schedule</label><select id="ab_m" onchange="abUi()"><option value="off">Off</option><option value="hours">Every few hours</option><option value="daily">Once a day at a set time</option></select>
+<div id="ab_hw"><label>Repeat every</label><select id="ab_h">${[1,2,3,4,6,8,12,24].map(x=>`<option value="${x}" ${x===a.hours?"selected":""}>${x} hour${x>1?"s":""}</option>`).join("")}</select></div>
+<div id="ab_tw"><label>Time of day</label><input type="time" id="ab_t" value="${esc(a.time)}"></div>
+<p class="mu" style="margin:0 0 6px">Last auto backup: ${a.last?new Date(a.last).toLocaleString():"none yet"}${a.msg?"<br>"+esc(a.msg):""}</p>
+<p class="mu" style="margin:0 0 10px">Files are named with date and time and saved on this phone. The latest 10 are kept. Backups run while the app is open, and any missed one runs when you next open the app.</p>
+<div class="row"><button class="b" style="flex:1" onclick="abSave()">Save</button><button class="b g" style="flex:1" onclick="abNow()">Backup now</button></div>`);
+$("#ab_m").value=a.mode;abUi()}
+/* ---------- cloud sync (web app only): your own Google Drive, hidden app-data folder ---------- */
+const NATIVE=!!(window.Capacitor&&window.Capacitor.isNativePlatform&&window.Capacitor.isNativePlatform());
+const GCID=String(window.UNDIYAL_CLIENT_ID||"").trim(),GSCOPE="https://www.googleapis.com/auth/drive.appdata",SYK="undiyal_sync",SYB="undiyal_syncbase",SYF="undiyal-data.json",DRV="https://www.googleapis.com/drive/v3/files";
+let SYS={};try{SYS=JSON.parse(localStorage.getItem(SYK)||"{}")||{}}catch(e){}
+let syState=SYS.on?"idle":"off",syT,syBusy=false,syAgain=false,DIP=null;
+const sySave=()=>{try{localStorage.setItem(SYK,JSON.stringify(SYS))}catch(e){}};
+const cj=x=>JSON.stringify(x,(k,v)=>v&&typeof v==="object"&&!Array.isArray(v)?Object.keys(v).sort().reduce((o,q)=>(o[q]=v[q],o),{}):v);
+const strip=s=>{const o={...s};delete o.ab;return o},core=s=>{const o=strip(s);delete o.mt;return cj(o)};
+const COLS=["pockets","tx","inc","bills","goals","inst"],SCL=["base","cyc","anchor","income","rates"];
+function snapOf(s){const o={};COLS.forEach(c=>{o[c]={};(s[c]||[]).forEach(x=>o[c][x.id]=cj(x))});SCL.forEach(k=>o[k]=cj(s[k]));return o}
+const loadBase=()=>{try{return JSON.parse(localStorage.getItem(SYB)||"null")}catch(e){return null}},saveBase=b=>{try{localStorage.setItem(SYB,JSON.stringify(b))}catch(e){}};
+const pristine=s=>!s.tx.length&&!s.inc.length&&!s.bills.length&&!s.goals.length&&!s.inst.length;
+/* three-way merge: local (L), cloud (R) and what both agreed on last time (B) */
+function merge(L,R,B){const out={...L};
+COLS.forEach(c=>{const l={},r={},b=B[c]||{};(L[c]||[]).forEach(x=>l[x.id]=x);(R[c]||[]).forEach(x=>r[x.id]=x);
+const ids=[...new Set([...(L[c]||[]).map(x=>x.id),...(R[c]||[]).map(x=>x.id)])];
+out[c]=ids.map(id=>{const a=l[id],z=r[id],aj=a&&cj(a),zj=z&&cj(z),bj=b[id];
+if(aj===zj||zj===bj)return a;if(aj===bj)return z;if(!a)return z;if(!z)return a;return (z.u||0)>(a.u||0)?z:a}).filter(Boolean)});
+SCL.forEach(k=>{const aj=cj(L[k]),zj=cj(R[k]),bj=B[k];if(aj===zj||zj===bj)return;if(aj===bj){out[k]=R[k];return}out[k]=(R.mt||0)>(L.mt||0)?R[k]:L[k]});
+out.mt=Math.max(L.mt||0,R.mt||0);return out}
+/* first sync on a device that already has data: treat same-named pockets as the same pocket */
+function dedupe(L,R){const nm=x=>String(x.n||"").trim().toLowerCase(),rm={},map={},L2={...L,pockets:[]};(R.pockets||[]).forEach(p=>rm[nm(p)]=p.id);
+(L.pockets||[]).forEach(p=>{const rid=rm[nm(p)];if(rid&&!(R.pockets||[]).some(q=>q.id===p.id))map[p.id]=rid;else L2.pockets.push(p)});
+L2.tx=(L.tx||[]).map(t=>map[t.p]?{...t,p:map[t.p]}:t);L2.bills=(L.bills||[]).map(b=>map[b.pk]?{...b,pk:map[b.pk]}:b);return L2}
+/* sign-in */
+const gisReady=()=>!!(window.google&&google.accounts&&google.accounts.oauth2);
+function loadGis(){return new Promise((ok,no)=>{if(gisReady())return ok();const s=document.createElement("script");s.src="https://accounts.google.com/gsi/client";s.async=true;s.onload=()=>ok();s.onerror=()=>no(new Error("offline"));document.head.appendChild(s)})}
+function redirectAuth(){const st=uid()+uid();try{localStorage.setItem("undiyal_oas",st)}catch(e){}location.href="https://accounts.google.com/o/oauth2/v2/auth?"+new URLSearchParams({client_id:GCID,redirect_uri:location.origin+location.pathname,response_type:"token",scope:GSCOPE,state:st,include_granted_scopes:"true"})}
+function oauthReturn(){if(location.hash.indexOf("access_token=")<0)return;const q=new URLSearchParams(location.hash.slice(1));let st=null;try{st=localStorage.getItem("undiyal_oas")}catch(e){}history.replaceState(null,"",location.pathname+location.search);
+if(q.get("state")&&q.get("state")===st){SYS.tok=q.get("access_token");SYS.exp=Date.now()+(+q.get("expires_in")||3600)*1000;SYS.on=true;SYS.has=1;sySave()}}
+async function getToken(interactive){if(SYS.tok&&SYS.exp>Date.now()+60000)return SYS.tok;if(!interactive)throw new Error("auth");
+if(navigator.standalone===true){redirectAuth();return new Promise(()=>{})}
+if(!gisReady())await loadGis();
+return new Promise((ok,no)=>{const tc=google.accounts.oauth2.initTokenClient({client_id:GCID,scope:GSCOPE,callback:r=>{if(!r||r.error)return no(new Error((r&&r.error)||"denied"));SYS.tok=r.access_token;SYS.exp=Date.now()+(+r.expires_in||3600)*1000;SYS.has=1;sySave();ok(SYS.tok)},error_callback:e=>no(new Error((e&&e.type)||"popup"))});tc.requestAccessToken({prompt:SYS.has?"":"select_account"})})}
+async function gfetch(url,opt){opt=opt||{};const t=await getToken(false),r=await fetch(url,{...opt,headers:{...(opt.headers||{}),Authorization:"Bearer "+t}});if(r.status===401){SYS.tok=null;SYS.exp=0;sySave();throw new Error("auth")}if(!r.ok)throw new Error("http "+r.status);return r}
+async function findFile(){const r=await gfetch(DRV+"?spaces=appDataFolder&pageSize=10&fields="+encodeURIComponent("files(id,modifiedTime)")+"&q="+encodeURIComponent("name='"+SYF+"'")),j=await r.json();return j.files&&j.files[0]}
+async function createFile(data){const b="u"+uid()+uid();await gfetch("https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart&fields=id",{method:"POST",headers:{"Content-Type":"multipart/related; boundary="+b},body:"--"+b+"\r\nContent-Type: application/json; charset=UTF-8\r\n\r\n"+JSON.stringify({name:SYF,parents:["appDataFolder"],mimeType:"application/json"})+"\r\n--"+b+"\r\nContent-Type: application/json\r\n\r\n"+data+"\r\n--"+b+"--"})}
+const updateFile=(id,data)=>gfetch("https://www.googleapis.com/upload/drive/v3/files/"+id+"?uploadType=media",{method:"PATCH",headers:{"Content-Type":"application/json"},body:data});
+/* sync */
+function syText(){const tm=SYS.last?new Date(SYS.last).toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"}):"";
+return syState==="busy"?"☁ Syncing…":syState==="ok"?"☁ Synced "+tm:syState==="auth"?"☁ Tap here to sign in and sync":syState==="offline"?"☁ Offline – will sync later":syState==="err"?"⚠ Sync failed – tap to retry":SYS.last?"☁ Last synced "+tm:"☁ Tap to sync"}
+function setSy(s){syState=s;const e=$("#sy");if(e)e.textContent=syText()}
+const syChip=()=>SYS.on&&!NATIVE?`<div id="sy" class="mu" style="text-align:right;margin-top:6px;cursor:pointer" onclick="syncNow(true)">${syText()}</div>`:"";
+function rerender(){const y=window.scrollY;render();scrollTo(0,y)}
+async function syncNow(interactive){if(NATIVE||!GCID||!SYS.on)return;if(syBusy){syAgain=true;return}syBusy=true;setSy("busy");
+try{await getToken(interactive);
+if(!SYS.who){try{const j=await (await gfetch("https://www.googleapis.com/drive/v3/about?fields=user(emailAddress)")).json();SYS.who=(j.user&&j.user.emailAddress)||"";sySave()}catch(e){}}
+const f=await findFile();let remote=null;
+if(f){const t=await (await gfetch(DRV+"/"+f.id+"?alt=media")).text();try{remote=JSON.parse(t)}catch(e){throw new Error("bad cloud file")}if(!remote||!remote.pockets)remote=null;else COLS.forEach(c=>remote[c]=remote[c]||[])}
+const base=loadBase();let merged=S;
+if(remote){if(!base&&pristine(S))merged={...remote,ab:S.ab};else merged=merge(base?S:dedupe(S,remote),remote,base||{})}
+if(core(merged)!==core(S)){S=merged;norm();try{localStorage.setItem(K,JSON.stringify(S))}catch(e){}rerender()}
+if(!remote||core(S)!==core(remote)){const d=JSON.stringify(strip(S));if(f)await updateFile(f.id,d);else await createFile(d)}
+saveBase(snapOf(S));SYS.last=Date.now();sySave();setSy("ok")}
+catch(e){const m=String(e&&e.message||e);setSy(["auth","popup_closed","popup_failed_to_open","access_denied","denied","popup"].includes(m)?"auth":(e instanceof TypeError||m==="offline")?"offline":"err")}
+finally{syBusy=false;if(syAgain){syAgain=false;setTimeout(()=>syncNow(false),300)}}}
+function syStart(){if(!GCID)return;SYS.on=true;sySave();cm();render();syncNow(true)}
+function syStop(){try{if(SYS.tok&&gisReady())google.accounts.oauth2.revoke(SYS.tok,()=>{})}catch(e){}SYS={};sySave();try{localStorage.removeItem(SYB)}catch(e){}syState="off";cm();render()}
+async function syDelete(){if(!confirm("Delete your cloud copy from Google Drive? The data on this device stays."))return;try{await getToken(true);const f=await findFile();if(f)await gfetch(DRV+"/"+f.id,{method:"DELETE"});try{localStorage.removeItem(SYB)}catch(e){}alert("Cloud copy deleted.")}catch(e){alert("Couldn’t delete it: "+(e.message||e))}}
+function cloudSheet(){loadGis().catch(()=>{});let body;
+if(!GCID)body=`<p class="mu">Cloud sync isn’t set up in this copy of the app yet. (Owner: put your Google client ID in config.js.)</p>`;
+else if(!SYS.on)body=`<p class="mu" style="margin:0 0 10px">Keep your data safe in <b>your own Google Drive</b> and use Undiyal on all your devices. It is saved in a hidden folder that only this app, on your Google account, can open. Nobody else can see it.</p><button class="b" style="width:100%" onclick="syStart()">Sign in with Google &amp; start sync</button>`;
+else body=`<p class="mu">Sync is <b>on</b>${SYS.who?" for "+esc(SYS.who):""}.<br>${SYS.last?"Last synced "+new Date(SYS.last).toLocaleString():"Not synced yet"}</p><div class="row"><button class="b" style="flex:1" onclick="cm();syncNow(true)">Sync now</button><button class="b g" style="flex:1" onclick="syStop()">Turn off</button></div><button class="b d s" style="margin-top:10px" onclick="syDelete()">Delete my cloud copy</button>`;
+om(`<h3 style="margin:0 0 8px">☁ Cloud sync</h3>${body}<p class="mu" style="margin:10px 0 0">Sign in with the same Google account on each device to see the same data. Changes sync automatically while you are signed in. After about an hour Google asks you to sign in again: just tap the ☁ line on the Home screen.</p><button class="b g" style="width:100%;margin-top:10px" onclick="cm()">Close</button>`)}
+function installRow(){if(NATIVE)return"";if(navigator.standalone===true||(window.matchMedia&&matchMedia("(display-mode: standalone)").matches))return"";
+if(DIP)return`<div class="row" style="margin-top:10px"><button class="b g s" style="flex:1" onclick="DIP.prompt()">Install app on this device</button></div>`;
+if(/iphone|ipad|ipod/i.test(navigator.userAgent))return`<p class="mu" style="margin:10px 0 0">To install on iPhone/iPad: tap the Share button in Safari, then “Add to Home Screen”.</p>`;return""}
+window.addEventListener("beforeinstallprompt",e=>{e.preventDefault();DIP=e});
+oauthReturn();
+if(!NATIVE){if(navigator.storage&&navigator.storage.persist)navigator.storage.persist().catch(()=>{});
+if("serviceWorker" in navigator&&/^https?:$/.test(location.protocol))window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));
+if(GCID&&SYS.on){loadGis().catch(()=>{});setTimeout(()=>syncNow(false),1200)}
+document.addEventListener("visibilitychange",()=>{if(!document.hidden&&SYS.on)syncNow(false)});window.addEventListener("online",()=>{if(SYS.on)syncNow(false)})}
+applyTheme();applyBg();
+setInterval(abCheck,60000);document.addEventListener("visibilitychange",()=>{if(!document.hidden)abCheck()});setTimeout(abCheck,3000);
+render();
+</script></body></html>
