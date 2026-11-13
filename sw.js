@@ -1,5 +1,5 @@
 // Network-first: you always get the latest version when online; works offline from cache.
-const V = "undiyal-v2";
+const V = "undiyal-v3";
 const SHELL = ["./", "index.html", "config.js", "manifest.webmanifest", "icons/icon-192.png", "icons/icon-512.png", "icons/apple-touch-icon.png"];
 self.addEventListener("install", e => {
   e.waitUntil(caches.open(V).then(c => Promise.all(SHELL.map(u => c.add(u).catch(() => {})))).then(() => self.skipWaiting()));
