@@ -4,7 +4,7 @@ Runs in any modern browser, installs like an app, works offline, and can sync ea
 data to **their own Google Drive** (hidden app-data folder, only visible to this app + that account).
 The code is public; nobody's data is. There is no server.
 
-Your site address will be:  https://riyajkhanm.github.io/undiyal/
+Your site address will be:  https://riyajkhanm.github.io/Undiyal-Web/
 
 ## Part 1 – Put the app online (GitHub Pages)
 1. github.com → **+** → **New repository** → name `undiyal` → **Public** → Create.
